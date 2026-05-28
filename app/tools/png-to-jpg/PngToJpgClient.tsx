@@ -93,7 +93,7 @@ export default function PngToJpgClient({ tool }: PngToJpgClientProps) {
         <div className="space-y-6 animate-fade-in">
           <FileCard file={file} onClear={!converting && !convertedUrl ? resetWorkspace : undefined} icon={<ImageIcon className="h-5 w-5" />} />
           {converting && (
-            <div className="p-6 rounded-xl bg-slate-900/30 border border-white/5">
+            <div className="p-6 rounded-xl bg-slate-900/30 border border-stone-900/15">
               <ProgressBar progress={progress} label="Converting PNG to JPG..." />
             </div>
           )}

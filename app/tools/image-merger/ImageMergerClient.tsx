@@ -158,14 +158,14 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
                   <Check className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-white">Stitch complete</h4>
-                  <p className="text-xs text-slate-400 mt-0.5">Your merged image is ready.</p>
+                  <h4 className="font-display font-semibold text-stone-900">Stitch complete</h4>
+                  <p className="text-xs text-stone-600 mt-0.5">Your merged image is ready.</p>
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={mergedUrl}
                   alt="Stitched output preview"
-                  className="max-w-full rounded-lg border border-white/10 max-h-[350px] shadow-lg"
+                  className="max-w-full rounded-lg border border-stone-900/15 max-h-[350px] shadow-lg"
                 />
               </div>
             ) : (
@@ -173,20 +173,20 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
                 {items.map((item, index) => (
                   <div
                     key={item.id}
-                    className="flex items-center justify-between p-3 rounded-xl bg-slate-900/40 border border-white/5 gap-4"
+                    className="flex items-center justify-between p-3 rounded-xl bg-slate-900/40 border border-stone-900/15 gap-4"
                   >
                     <div className="flex items-center gap-3 min-w-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={item.previewUrl}
                         alt="Preview"
-                        className="h-12 w-12 rounded-lg object-cover bg-slate-800 border border-white/10 shrink-0"
+                        className="h-12 w-12 rounded-lg object-cover bg-slate-800 border border-stone-900/15 shrink-0"
                       />
                       <div className="min-w-0">
-                        <p className="text-xs font-semibold text-white truncate max-w-xs sm:max-w-md">
+                        <p className="text-xs font-semibold text-stone-900 truncate max-w-xs sm:max-w-md">
                           {item.file.name}
                         </p>
-                        <p className="text-xxs text-slate-400 mt-0.5">
+                        <p className="text-xxs text-stone-600 mt-0.5">
                           {(item.file.size / 1024).toFixed(1)} KB
                         </p>
                       </div>
@@ -197,20 +197,20 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
                         <button
                           onClick={() => moveItem(index, "up")}
                           disabled={index === 0}
-                          className="p-1 rounded hover:bg-white/5 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:bg-transparent"
+                          className="p-1 rounded hover:bg-stone-900/5 text-stone-600 hover:text-stone-900 disabled:opacity-30 disabled:hover:bg-transparent"
                         >
                           ▲
                         </button>
                         <button
                           onClick={() => moveItem(index, "down")}
                           disabled={index === items.length - 1}
-                          className="p-1 rounded hover:bg-white/5 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:bg-transparent"
+                          className="p-1 rounded hover:bg-stone-900/5 text-stone-600 hover:text-stone-900 disabled:opacity-30 disabled:hover:bg-transparent"
                         >
                           ▼
                         </button>
                         <button
                           onClick={() => removeItem(item.id)}
-                          className="p-1 rounded hover:bg-red-500/10 text-slate-400 hover:text-red-400 ml-1"
+                          className="p-1 rounded hover:bg-red-500/10 text-stone-600 hover:text-red-400 ml-1"
                         >
                           ✕
                         </button>
@@ -224,21 +224,21 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
 
           {/* Settings panel */}
           <div className="space-y-6">
-            <div className="rounded-xl border border-white/5 bg-slate-900/40 p-5 space-y-5">
-              <h3 className="font-display font-bold text-white text-sm">Stitch Settings</h3>
+            <div className="rounded-xl border border-stone-900/15 bg-slate-900/40 p-5 space-y-5">
+              <h3 className="font-display font-bold text-stone-900 text-sm">Stitch Settings</h3>
 
               {!mergedUrl && !merging && (
                 <>
                   {/* Layout Orientation */}
                   <div className="space-y-2.5">
-                    <label className="text-xs text-slate-400 font-semibold tracking-wide">Direction</label>
+                    <label className="text-xs text-stone-600 font-semibold tracking-wide">Direction</label>
                     <div className="flex gap-2">
                       <button
                         onClick={() => setDirection("horizontal")}
                         className={`flex-1 rounded-lg py-2 px-3 text-xs font-semibold border transition-all ${
                           direction === "horizontal"
                             ? "bg-primary border-primary text-white"
-                            : "bg-slate-950/60 border-white/5 text-slate-400 hover:text-white"
+                            : "bg-slate-950/60 border-stone-900/15 text-stone-600 hover:text-stone-900"
                         }`}
                       >
                         Horizontal ➡️
@@ -248,7 +248,7 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
                         className={`flex-1 rounded-lg py-2 px-3 text-xs font-semibold border transition-all ${
                           direction === "vertical"
                             ? "bg-primary border-primary text-white"
-                            : "bg-slate-950/60 border-white/5 text-slate-400 hover:text-white"
+                            : "bg-slate-950/60 border-stone-900/15 text-stone-600 hover:text-stone-900"
                         }`}
                       >
                         Vertical ⬇️
@@ -259,7 +259,7 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
                   {/* Border Width */}
                   <div className="space-y-2">
                     <div className="flex justify-between text-xs font-semibold">
-                      <span className="text-slate-400">Border Spacing</span>
+                      <span className="text-stone-600">Border Spacing</span>
                       <span className="text-primary">{borderWidth}px</span>
                     </div>
                     <input
@@ -274,24 +274,24 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
 
                   {/* Border Color */}
                   <div className="space-y-2.5">
-                    <label className="text-xs text-slate-400 font-semibold tracking-wide">Border Color</label>
+                    <label className="text-xs text-stone-600 font-semibold tracking-wide">Border Color</label>
                     <div className="flex items-center gap-3">
                       <input
                         type="color"
                         value={borderColor}
                         onChange={(e) => setBorderColor(e.target.value)}
-                        className="h-9 w-9 rounded-lg border border-white/10 bg-transparent cursor-pointer"
+                        className="h-9 w-9 rounded-lg border border-stone-900/15 bg-transparent cursor-pointer"
                       />
-                      <span className="text-xs font-mono text-slate-400 uppercase">{borderColor}</span>
+                      <span className="text-xs font-mono text-stone-600 uppercase">{borderColor}</span>
                     </div>
                   </div>
                 </>
               )}
 
               {/* Action Trigger */}
-              <div className="space-y-3 pt-4 border-t border-white/5">
+              <div className="space-y-3 pt-4 border-t border-stone-900/15">
                 {items.length > 0 && !mergedUrl && !merging && (
-                  <div className="flex justify-between text-xxs text-slate-500 mb-2">
+                  <div className="flex justify-between text-xxs text-stone-500 mb-2">
                     <button
                       onClick={() => {
                         const input = document.createElement("input");
@@ -328,7 +328,7 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
                     <DownloadButton fileUrl={mergedUrl} fileName={mergedName} label="Download Merged" />
                     <button
                       onClick={() => setMergedUrl(null)}
-                      className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white transition-all text-sm"
+                      className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 text-stone-700 hover:bg-stone-900/10 hover:text-stone-900 transition-all text-sm"
                     >
                       Adjust Stitch
                     </button>
@@ -337,7 +337,7 @@ export default function ImageMergerClient({ tool }: ImageMergerClientProps) {
 
                 <button
                   onClick={resetWorkspace}
-                  className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:bg-white/10 hover:text-white transition-all text-sm"
+                  className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 text-stone-600 hover:bg-stone-900/10 hover:text-stone-900 transition-all text-sm"
                 >
                   {mergedUrl ? "Start Over" : "Cancel"}
                 </button>

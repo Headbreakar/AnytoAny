@@ -97,14 +97,14 @@ export default function CsvToXlsxClient({ tool }: CsvToXlsxClientProps) {
       {file && (
         <div className="space-y-6">
           {/* File details panel */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-slate-900/40 border border-white/5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-slate-900/40 border border-stone-900/15">
             <div className="flex items-center gap-3">
               <span className="text-3xl">📈</span>
               <div className="min-w-0">
-                <p className="text-sm font-semibold text-white truncate max-w-xs sm:max-w-md">
+                <p className="text-sm font-semibold text-stone-900 truncate max-w-xs sm:max-w-md">
                   {file.name}
                 </p>
-                <p className="text-xs text-slate-400 mt-0.5">
+                <p className="text-xs text-stone-600 mt-0.5">
                   {(file.size / 1024).toFixed(1)} KB
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function CsvToXlsxClient({ tool }: CsvToXlsxClientProps) {
             {!converting && !xlsxUrl && (
               <button
                 onClick={resetWorkspace}
-                className="text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+                className="text-xs font-semibold text-stone-600 hover:text-stone-900 transition-colors"
               >
                 Clear File
               </button>
@@ -122,7 +122,7 @@ export default function CsvToXlsxClient({ tool }: CsvToXlsxClientProps) {
 
           {/* Converting progress */}
           {converting && (
-            <div className="p-6 rounded-xl bg-slate-900/20 border border-white/5">
+            <div className="p-6 rounded-xl bg-slate-900/20 border border-stone-900/15">
               <ProgressBar progress={progress} label="Converting CSV to Excel workbook..." />
             </div>
           )}

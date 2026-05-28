@@ -151,7 +151,7 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cropper Window */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="overflow-hidden rounded-xl border border-white/5 bg-slate-950/40 p-2 max-h-[500px] flex items-center justify-center">
+            <div className="overflow-hidden rounded-xl border border-stone-900/15 bg-slate-950/40 p-2 max-h-[500px] flex items-center justify-center">
               {!croppedUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -162,12 +162,12 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
                 />
               ) : (
                 <div className="text-center p-6 space-y-4">
-                  <p className="text-xs text-slate-400">Cropped Result Preview</p>
+                  <p className="text-xs text-stone-600">Cropped Result Preview</p>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={croppedUrl}
                     alt="Cropped output"
-                    className="max-w-full rounded-lg border border-white/10 max-h-[350px] shadow-lg"
+                    className="max-w-full rounded-lg border border-stone-900/15 max-h-[350px] shadow-lg"
                   />
                 </div>
               )}
@@ -176,13 +176,13 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
 
           {/* Controls Panel */}
           <div className="space-y-6">
-            <div className="rounded-xl border border-white/5 bg-slate-900/40 p-5 space-y-5">
-              <h3 className="font-display font-bold text-white text-sm">Crop Configurations</h3>
+            <div className="rounded-xl border border-stone-900/15 bg-slate-900/40 p-5 space-y-5">
+              <h3 className="font-display font-bold text-stone-900 text-sm">Crop Configurations</h3>
 
               {/* Ratios selector */}
               {!croppedUrl && !cropping && (
                 <div className="space-y-2.5">
-                  <label className="text-xs text-slate-400 font-semibold tracking-wide">Aspect Ratio</label>
+                  <label className="text-xs text-stone-600 font-semibold tracking-wide">Aspect Ratio</label>
                   <div className="grid grid-cols-2 gap-2">
                     {RATIOS.map((ratio) => (
                       <button
@@ -191,7 +191,7 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
                         className={`rounded-lg py-2 px-3 text-xs font-semibold border transition-all ${
                           (isNaN(aspectRatio) && isNaN(ratio.value)) || aspectRatio === ratio.value
                             ? "bg-primary border-primary text-white shadow-md shadow-primary/10"
-                            : "bg-slate-950/60 border-white/5 text-slate-400 hover:text-white hover:border-white/10"
+                            : "bg-slate-950/60 border-stone-900/15 text-stone-600 hover:text-stone-900 hover:border-stone-900/15"
                         }`}
                       >
                         {ratio.label}
@@ -202,7 +202,7 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
               )}
 
               {/* File Info */}
-              <div className="text-xs space-y-1.5 border-t border-white/5 pt-4 text-slate-400">
+              <div className="text-xs space-y-1.5 border-t border-stone-900/15 pt-4 text-stone-600">
                 <p>
                   File: <strong className="text-slate-200">{file.name}</strong>
                 </p>
@@ -229,7 +229,7 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
                     <DownloadButton fileUrl={croppedUrl} fileName={croppedName} label="Download Crop" />
                     <button
                       onClick={() => setCroppedUrl(null)}
-                      className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white transition-all text-sm"
+                      className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 text-stone-700 hover:bg-stone-900/10 hover:text-stone-900 transition-all text-sm"
                     >
                       Adjust Crop
                     </button>
@@ -238,7 +238,7 @@ export default function ImageCropperClient({ tool }: ImageCropperClientProps) {
 
                 <button
                   onClick={resetWorkspace}
-                  className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:bg-white/10 hover:text-white transition-all text-sm"
+                  className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 text-stone-600 hover:bg-stone-900/10 hover:text-stone-900 transition-all text-sm"
                 >
                   {croppedUrl ? "Upload Another" : "Cancel"}
                 </button>

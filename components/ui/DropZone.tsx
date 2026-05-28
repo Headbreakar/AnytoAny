@@ -118,7 +118,7 @@ export default function DropZone({
       className={`group relative flex min-h-72 w-full cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed p-10 text-center transition-all duration-400 ${
         isDragActive
           ? "border-primary bg-primary/10 scale-[1.01] shadow-inner shadow-primary/10"
-          : "border-white/10 bg-slate-900/30 hover:border-primary/40 hover:bg-slate-900/50 hover:shadow-xl hover:shadow-primary/5"
+          : "border-stone-900/15 bg-slate-900/30 hover:border-primary/40 hover:bg-slate-900/50 hover:shadow-xl hover:shadow-primary/5"
       }`}
     >
       <input
@@ -134,7 +134,7 @@ export default function DropZone({
         className={`mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border transition-all duration-400 ${
           isDragActive
             ? "scale-110 border-primary/40 bg-primary/20 text-primary"
-            : "border-white/10 bg-white/5 text-slate-400 group-hover:scale-105 group-hover:border-primary/30 group-hover:bg-primary/10 group-hover:text-primary"
+            : "border-stone-900/15 bg-stone-900/5 text-stone-600 group-hover:scale-105 group-hover:border-primary/30 group-hover:bg-primary/10 group-hover:text-primary"
         }`}
       >
         {isDragActive ? (
@@ -144,12 +144,12 @@ export default function DropZone({
         )}
       </div>
 
-      <p className="font-display text-lg font-semibold text-white tracking-wide">
+      <p className="font-display text-lg font-semibold text-stone-900 tracking-wide">
         {isDragActive ? "Drop to upload" : "Click or " + label}
       </p>
-      <p className="mt-2 text-sm text-slate-500">
+      <p className="mt-2 text-sm text-stone-500">
         Maximum size:{" "}
-        <span className="font-semibold text-slate-300">{fileSizeCap} MB</span>
+        <span className="font-semibold text-stone-700">{fileSizeCap} MB</span>
       </p>
 
       <div

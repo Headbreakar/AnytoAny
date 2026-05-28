@@ -132,14 +132,14 @@ export default function XlsxToCsvClient({ tool }: XlsxToCsvClientProps) {
       {file && (
         <div className="space-y-6">
           {/* File details banner */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-slate-900/40 border border-white/5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-slate-900/40 border border-stone-900/15">
             <div className="flex items-center gap-3">
               <span className="text-3xl">📊</span>
               <div className="min-w-0">
-                <p className="text-sm font-semibold text-white truncate max-w-xs sm:max-w-md">
+                <p className="text-sm font-semibold text-stone-900 truncate max-w-xs sm:max-w-md">
                   {file.name}
                 </p>
-                <p className="text-xs text-slate-400 mt-0.5">
+                <p className="text-xs text-stone-600 mt-0.5">
                   {(file.size / 1024).toFixed(1)} KB • {sheetNames.length} sheet{sheetNames.length !== 1 ? "s" : ""}
                 </p>
               </div>
@@ -148,7 +148,7 @@ export default function XlsxToCsvClient({ tool }: XlsxToCsvClientProps) {
             {!converting && !csvUrl && (
               <button
                 onClick={resetWorkspace}
-                className="text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+                className="text-xs font-semibold text-stone-600 hover:text-stone-900 transition-colors"
               >
                 Clear File
               </button>
@@ -157,7 +157,7 @@ export default function XlsxToCsvClient({ tool }: XlsxToCsvClientProps) {
 
           {/* Converting progress */}
           {converting && (
-            <div className="p-6 rounded-xl bg-slate-900/20 border border-white/5">
+            <div className="p-6 rounded-xl bg-slate-900/20 border border-stone-900/15">
               <ProgressBar progress={progress} label="Converting Excel to CSV..." />
             </div>
           )}
@@ -179,10 +179,10 @@ export default function XlsxToCsvClient({ tool }: XlsxToCsvClientProps) {
       {/* Sheet Picker Modal */}
       {showModal && file && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-fade-in">
-          <div className="w-full max-w-md glass-panel rounded-2xl p-6 shadow-2xl space-y-6 animate-scale-in border border-white/10">
+          <div className="w-full max-w-md glass-panel rounded-2xl p-6 shadow-2xl space-y-6 animate-scale-in border border-stone-900/15">
             <div>
-              <h3 className="font-display text-lg font-bold text-white">Select Worksheet</h3>
-              <p className="text-xs text-slate-400 mt-1">
+              <h3 className="font-display text-lg font-bold text-stone-900">Select Worksheet</h3>
+              <p className="text-xs text-stone-600 mt-1">
                 Excel workbooks can contain multiple tables. Pick the sheet you want to export as a CSV:
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function XlsxToCsvClient({ tool }: XlsxToCsvClientProps) {
                   className={`w-full flex items-center justify-between p-3 rounded-xl border text-left text-xs font-semibold transition-all ${
                     selectedSheet === sheet
                       ? "border-primary bg-primary/10 text-primary font-bold"
-                      : "border-white/5 bg-slate-950/40 text-slate-300 hover:border-white/10 hover:text-white"
+                      : "border-stone-900/15 bg-slate-950/40 text-stone-700 hover:border-stone-900/15 hover:text-white"
                   }`}
                 >
                   <span>📁 {sheet}</span>
@@ -213,7 +213,7 @@ export default function XlsxToCsvClient({ tool }: XlsxToCsvClientProps) {
               </button>
               <button
                 onClick={resetWorkspace}
-                className="inline-flex h-10 items-center justify-center rounded-xl bg-white/5 border border-white/10 px-4 text-sm font-semibold text-slate-400 hover:text-white transition-colors"
+                className="inline-flex h-10 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 px-4 text-sm font-semibold text-stone-600 hover:text-stone-900 transition-colors"
               >
                 Cancel
               </button>

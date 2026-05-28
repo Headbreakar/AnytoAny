@@ -73,7 +73,7 @@ function ToolCatalogInner() {
     <div className="w-full space-y-10">
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
         <div
-          className="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-slate-900/50 border border-white/5 backdrop-blur-sm"
+          className="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-slate-900/50 border border-stone-900/15 backdrop-blur-sm"
           role="tablist"
         >
           {categories.map((cat) => (
@@ -85,7 +85,7 @@ function ToolCatalogInner() {
               className={`rounded-xl px-4 py-2.5 text-xs font-semibold tracking-wide transition-all duration-300 ${
                 activeCategory === cat.id
                   ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/15 scale-[1.02]"
-                  : "text-slate-400 hover:text-white hover:bg-white/5"
+                  : "text-stone-600 hover:text-stone-900 hover:bg-stone-900/5"
               }`}
             >
               {cat.name}
@@ -95,18 +95,18 @@ function ToolCatalogInner() {
         </div>
 
         <div className="relative w-full max-w-sm">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 pointer-events-none" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-500 pointer-events-none" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search tools..."
-            className="w-full rounded-xl border border-white/10 bg-slate-950/70 py-3 pl-10 pr-10 text-sm text-white placeholder-slate-500 focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+            className="w-full rounded-xl border border-stone-900/15 bg-slate-950/70 py-3 pl-10 pr-10 text-sm text-stone-900 placeholder-slate-500 focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
           />
           {search && (
             <button
               onClick={() => setSearch("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-500 hover:text-stone-900 transition-colors"
               aria-label="Clear search"
             >
               <X className="h-4 w-4" />
@@ -128,35 +128,35 @@ function ToolCatalogInner() {
               >
                 <Link
                   href={`/tools/${tool.slug}`}
-                  className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/5 bg-bg-card/40 p-6 backdrop-blur-sm transition-all duration-400 hover:-translate-y-1.5 hover:border-primary/25 hover:bg-bg-card/60 hover:shadow-2xl hover:shadow-primary/10 card-glow"
+                  className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-stone-900/15 bg-bg-card/40 p-6 backdrop-blur-sm transition-all duration-400 hover:-translate-y-1.5 hover:border-primary/25 hover:bg-bg-card/60 hover:shadow-2xl hover:shadow-primary/10 card-glow"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                   <div className="relative">
                     <div className="flex items-start justify-between mb-5">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300 group-hover:scale-110">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300 group-hover:scale-110">
                         <ToolIcon
                           name={tool.icon}
-                          className="h-6 w-6 text-slate-300 group-hover:text-primary transition-colors duration-300"
+                          className="h-6 w-6 text-stone-700 group-hover:text-primary transition-colors duration-300"
                         />
                       </span>
                       <span
-                        className={`rounded-full bg-slate-900/80 border border-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider ${badge.class}`}
+                        className={`rounded-full bg-slate-900/80 border border-stone-900/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider ${badge.class}`}
                       >
                         {badge.label}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-white group-hover:text-primary transition-colors duration-300">
+                    <h3 className="font-display text-lg font-bold text-stone-900 group-hover:text-primary transition-colors duration-300">
                       {tool.name}
                     </h3>
-                    <p className="mt-2 text-sm text-slate-400 leading-relaxed line-clamp-2">
+                    <p className="mt-2 text-sm text-stone-600 leading-relaxed line-clamp-2">
                       {tool.description}
                     </p>
                   </div>
 
-                  <div className="relative mt-6 flex items-center justify-between border-t border-white/5 pt-4">
-                    <span className="text-[11px] text-slate-500">
-                      Max <strong className="text-slate-300">{tool.fileSizeCap}MB</strong>
+                  <div className="relative mt-6 flex items-center justify-between border-t border-stone-900/15 pt-4">
+                    <span className="text-[11px] text-stone-500">
+                      Max <strong className="text-stone-700">{tool.fileSizeCap}MB</strong>
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                       Open
@@ -169,10 +169,10 @@ function ToolCatalogInner() {
           })}
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center py-20 text-center rounded-2xl border border-dashed border-white/10 bg-bg-card/20 animate-scale-in">
+        <div className="flex flex-col items-center justify-center py-20 text-center rounded-2xl border border-dashed border-stone-900/15 bg-bg-card/20 animate-scale-in">
           <Compass className="h-12 w-12 text-slate-600 mb-4" />
-          <h3 className="text-lg font-semibold text-white">No tools found</h3>
-          <p className="text-sm text-slate-400 mt-1 max-w-xs">
+          <h3 className="text-lg font-semibold text-stone-900">No tools found</h3>
+          <p className="text-sm text-stone-600 mt-1 max-w-xs">
             Try a different search or category filter.
           </p>
         </div>
@@ -188,7 +188,7 @@ function ToolCatalogInner() {
 
 export default function ToolCatalog() {
   return (
-    <Suspense fallback={<div className="h-64 animate-pulse rounded-2xl bg-white/5" />}>
+    <Suspense fallback={<div className="h-64 animate-pulse rounded-2xl bg-stone-900/5" />}>
       <ToolCatalogInner />
     </Suspense>
   );

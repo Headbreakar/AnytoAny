@@ -111,7 +111,7 @@ export default function WordToPdfClient({ tool }: WordToPdfClientProps) {
           />
 
           {converting && (
-            <div className="p-6 rounded-xl bg-slate-900/30 border border-white/5">
+            <div className="p-6 rounded-xl bg-slate-900/30 border border-stone-900/15">
               <ProgressBar progress={progress} label="Converting via secure API..." />
             </div>
           )}

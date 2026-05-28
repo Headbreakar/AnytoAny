@@ -136,7 +136,7 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
       {items.length > 0 && (
         <div className="space-y-6">
           <div className="flex items-center justify-between">
-            <h3 className="font-display font-bold text-white text-base">
+            <h3 className="font-display font-bold text-stone-900 text-base">
               Selected Images ({items.length})
             </h3>
             {!converting && !pdfUrl && (
@@ -158,7 +158,7 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
                 </button>
                 <button
                   onClick={resetWorkspace}
-                  className="text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+                  className="text-xs font-semibold text-stone-600 hover:text-stone-900 transition-colors"
                 >
                   Clear All
                 </button>
@@ -171,7 +171,7 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
             {items.map((item, index) => (
               <div
                 key={item.id}
-                className="flex items-center justify-between p-3 rounded-xl bg-slate-900/40 border border-white/5 gap-4"
+                className="flex items-center justify-between p-3 rounded-xl bg-slate-900/40 border border-stone-900/15 gap-4"
               >
                 <div className="flex items-center gap-3 min-w-0">
                   {/* Image Thumbnail */}
@@ -179,13 +179,13 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
                   <img
                     src={item.previewUrl}
                     alt="Preview"
-                    className="h-12 w-12 rounded-lg object-cover bg-slate-800 border border-white/10 shrink-0"
+                    className="h-12 w-12 rounded-lg object-cover bg-slate-800 border border-stone-900/15 shrink-0"
                   />
                   <div className="min-w-0">
-                    <p className="text-xs font-semibold text-white truncate max-w-xs sm:max-w-md">
+                    <p className="text-xs font-semibold text-stone-900 truncate max-w-xs sm:max-w-md">
                       {item.file.name}
                     </p>
-                    <p className="text-xxs text-slate-400 mt-0.5">
+                    <p className="text-xxs text-stone-600 mt-0.5">
                       {(item.file.size / 1024).toFixed(1)} KB
                     </p>
                   </div>
@@ -197,7 +197,7 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
                     <button
                       onClick={() => moveItem(index, "up")}
                       disabled={index === 0}
-                      className="p-1 rounded hover:bg-white/5 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:bg-transparent"
+                      className="p-1 rounded hover:bg-stone-900/5 text-stone-600 hover:text-stone-900 disabled:opacity-30 disabled:hover:bg-transparent"
                       title="Move Up"
                     >
                       ▲
@@ -205,14 +205,14 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
                     <button
                       onClick={() => moveItem(index, "down")}
                       disabled={index === items.length - 1}
-                      className="p-1 rounded hover:bg-white/5 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:bg-transparent"
+                      className="p-1 rounded hover:bg-stone-900/5 text-stone-600 hover:text-stone-900 disabled:opacity-30 disabled:hover:bg-transparent"
                       title="Move Down"
                     >
                       ▼
                     </button>
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="p-1 rounded hover:bg-red-500/10 text-slate-400 hover:text-red-400 ml-1"
+                      className="p-1 rounded hover:bg-red-500/10 text-stone-600 hover:text-red-400 ml-1"
                       title="Delete"
                     >
                       ✕
@@ -235,7 +235,7 @@ export default function ImageToPdfClient({ tool }: ImageToPdfClientProps) {
 
           {/* Converting progress */}
           {converting && (
-            <div className="p-6 rounded-xl bg-slate-900/20 border border-white/5">
+            <div className="p-6 rounded-xl bg-slate-900/20 border border-stone-900/15">
               <ProgressBar progress={progress} label="Compiling images to PDF..." />
             </div>
           )}

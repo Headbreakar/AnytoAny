@@ -26,14 +26,14 @@ export default function SuccessPanel({
         <CheckCircle2 className="h-7 w-7 text-primary" />
       </div>
       <div>
-        <h4 className="font-display text-lg font-bold text-white">{title}</h4>
-        <p className="text-sm text-slate-400 mt-1">{subtitle}</p>
+        <h4 className="font-display text-lg font-bold text-stone-900">{title}</h4>
+        <p className="text-sm text-stone-600 mt-1">{subtitle}</p>
       </div>
       <div className="flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
         <DownloadButton fileUrl={fileUrl} fileName={fileName} label={downloadLabel} />
         <button
           onClick={onReset}
-          className="inline-flex h-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 px-6 font-semibold text-slate-300 hover:bg-white/10 hover:text-white transition-all duration-200 text-sm w-full sm:w-auto"
+          className="inline-flex h-12 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 px-6 font-semibold text-stone-700 hover:bg-stone-900/10 hover:text-stone-900 transition-all duration-200 text-sm w-full sm:w-auto"
         >
           {resetLabel}
         </button>

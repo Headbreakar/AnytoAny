@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-display: var(--font-outfit), var(--font-sans);
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-playfair), var(--font-sans);
 
-  --color-bg-dark: #030712;
-  --color-bg-card: #0c1222;
-  --color-border-subtle: rgba(255, 255, 255, 0.06);
-  --color-border-focus: rgba(16, 185, 129, 0.4);
+  --color-bg-dark: #fdfbf7;
+  --color-bg-card: #ffffff;
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --color-border-focus: rgba(205, 7, 7, 0.3);
 
-  --color-primary: #10b981;
-  --color-primary-hover: #059669;
-  --color-secondary: #8b5cf6;
-  --color-secondary-hover: #7c3aed;
-  --color-accent: #f59e0b;
+  --color-primary: #cd0707;
+  --color-primary-hover: #a30505;
+  --color-secondary: #991b1b;
+  --color-secondary-hover: #7f1d1d;
+  --color-accent: #ea580c;
 
-  --color-glass-bg: rgba(12, 18, 34, 0.72);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
-  --color-glass-highlight: rgba(255, 255, 255, 0.04);
+  --color-glass-bg: rgba(255, 255, 255, 0.85);
+  --color-glass-border: rgba(0, 0, 0, 0.08);
+  --color-glass-highlight: rgba(255, 255, 255, 0.9);
 
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-float: float 8s ease-in-out infinite;
@@ -82,8 +82,8 @@
 }
 
 :root {
-  --background: #030712;
-  --foreground: #f8fafc;
+  --background: #fdfbf7;
+  --foreground: #1c1917;
 }
 
 body {
@@ -112,13 +112,13 @@ body {
 
 /* Glass panels */
 .glass-panel {
-  background: rgba(12, 18, 34, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    0 4px 20px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .glass-panel-hover {
@@ -126,13 +126,13 @@ body {
 }
 
 .glass-panel-hover:hover {
-  background: rgba(16, 24, 48, 0.75);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
   box-shadow:
-    0 20px 48px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(16, 185, 129, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 12px 30px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(205, 7, 7, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 /* Gradient border card on hover */
@@ -147,7 +147,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(139, 92, 246, 0.4));
+  background: linear-gradient(135deg, rgba(205, 7, 7, 0.4), rgba(153, 27, 27, 0.4));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -165,8 +165,8 @@ body {
 /* Mesh grid overlay */
 .mesh-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -177,28 +177,28 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #fdfbf7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #e5e5e5;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #d4d4d4;
 }
 
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #34d399 0%, #6ee7b7 40%, #a78bfa 100%);
+  background: linear-gradient(135deg, #cd0707 0%, #f43f5e 50%, #991b1b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-amber {
-  background: linear-gradient(135deg, #fbbf24 0%, #f87171 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #cd0707 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -209,11 +209,11 @@ body {
   background-size: 200% auto;
   background-image: linear-gradient(
     90deg,
-    #10b981 0%,
-    #34d399 25%,
-    #8b5cf6 50%,
-    #34d399 75%,
-    #10b981 100%
+    #cd0707 0%,
+    #ef4444 25%,
+    #991b1b 50%,
+    #ef4444 75%,
+    #cd0707 100%
   );
 }
 
@@ -261,8 +261,8 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(16, 185, 129, 0.4),
-    rgba(139, 92, 246, 0.4),
+    rgba(205, 7, 7, 0.3),
+    rgba(153, 27, 27, 0.3),
     transparent
   );
 }

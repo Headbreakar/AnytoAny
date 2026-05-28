@@ -35,7 +35,7 @@ export default function DownloadButton({
   return (
     <button
       onClick={handleDownload}
-      className={`inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 font-semibold text-white transition-all duration-300 active:scale-[0.97] shadow-lg min-w-[180px] ${
+      className={`inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 font-semibold text-stone-900 transition-all duration-300 active:scale-[0.97] shadow-lg min-w-[180px] ${
         downloaded
           ? "bg-emerald-600 shadow-emerald-500/25"
           : "btn-shimmer bg-gradient-to-r from-primary to-secondary hover:shadow-primary/30 hover:shadow-xl"

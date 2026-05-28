@@ -114,16 +114,16 @@ export default function BgRemoverClient({ tool }: BgRemoverClientProps) {
           {/* Visual Workspace (Slider Comparison / Preview) */}
           <div className="lg:col-span-2 space-y-4 flex flex-col items-center justify-center">
             {processing && (
-              <div className="w-full p-8 rounded-xl bg-slate-900/20 border border-white/5 space-y-4">
+              <div className="w-full p-8 rounded-xl bg-slate-900/20 border border-stone-900/15 space-y-4">
                 <ProgressBar progress={progress} label={stepLabel} />
-                <p className="text-xxs text-slate-500 text-center">
+                <p className="text-xxs text-stone-500 text-center">
                   Note: The first run downloads a lightweight 7MB neural model. Subsequent runs are near instant.
                 </p>
               </div>
             )}
 
             {!processing && fileUrl && (
-              <div className="relative overflow-hidden w-full max-w-[450px] aspect-square rounded-2xl border border-white/10 bg-slate-950/40 flex items-center justify-center">
+              <div className="relative overflow-hidden w-full max-w-[450px] aspect-square rounded-2xl border border-stone-900/15 bg-slate-950/40 flex items-center justify-center">
                 {resultUrl ? (
                   <>
                     {/* Checkered pattern background for transparency preview */}
@@ -177,12 +177,12 @@ export default function BgRemoverClient({ tool }: BgRemoverClientProps) {
 
           {/* Controls Panel */}
           <div className="space-y-6">
-            <div className="rounded-xl border border-white/5 bg-slate-900/40 p-5 space-y-5">
-              <h3 className="font-display font-bold text-white text-sm">Background Removal</h3>
+            <div className="rounded-xl border border-stone-900/15 bg-slate-900/40 p-5 space-y-5">
+              <h3 className="font-display font-bold text-stone-900 text-sm">Background Removal</h3>
 
               {resultUrl && (
-                <div className="space-y-1 text-xs text-slate-400">
-                  <p className="text-white font-semibold mb-2">Compare Result:</p>
+                <div className="space-y-1 text-xs text-stone-600">
+                  <p className="text-stone-900 font-semibold mb-2">Compare Result:</p>
                   <p><span className="text-primary font-semibold mr-1">&larr;</span> Left side: Original Image</p>
                   <p><span className="text-secondary font-semibold mr-1">&rarr;</span> Right side: Cutout Image</p>
                   <p className="mt-2 text-xxs text-primary font-medium">Use the visual slider to compare details.</p>
@@ -190,7 +190,7 @@ export default function BgRemoverClient({ tool }: BgRemoverClientProps) {
               )}
 
               {/* File Info */}
-              <div className="text-xs space-y-1.5 border-t border-white/5 pt-4 text-slate-400">
+              <div className="text-xs space-y-1.5 border-t border-stone-900/15 pt-4 text-stone-600">
                 <p>
                   File: <strong className="text-slate-200">{file.name}</strong>
                 </p>
@@ -208,7 +208,7 @@ export default function BgRemoverClient({ tool }: BgRemoverClientProps) {
                 <button
                   onClick={resetWorkspace}
                   disabled={processing}
-                  className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white transition-all text-sm disabled:opacity-55 disabled:cursor-not-allowed"
+                  className="w-full inline-flex h-11 items-center justify-center rounded-xl bg-stone-900/5 border border-stone-900/15 text-stone-700 hover:bg-stone-900/10 hover:text-stone-900 transition-all text-sm disabled:opacity-55 disabled:cursor-not-allowed"
                 >
                   {resultUrl ? "Upload Another" : "Cancel"}
                 </button>

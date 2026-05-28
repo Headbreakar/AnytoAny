@@ -18,7 +18,7 @@ export default function ErrorBanner({ message, code, onRetry }: ErrorBannerProps
             <AlertTriangle className="h-5 w-5" />
           </span>
           <div>
-            <h4 className="font-display font-semibold text-white">Something went wrong</h4>
+            <h4 className="font-display font-semibold text-stone-900">Something went wrong</h4>
             <p className="mt-1 text-sm text-red-200/80">{message}</p>
             {code && (
               <span className="mt-2 inline-block rounded-md bg-red-950/80 px-2 py-0.5 text-[10px] font-mono tracking-wider text-red-400 uppercase border border-red-500/20">

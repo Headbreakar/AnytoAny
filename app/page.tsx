@@ -56,20 +56,14 @@ export default function Home() {
       {/* Hero */}
       <section className="relative w-full px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28 max-w-7xl mx-auto">
         <div className="text-center space-y-8 max-w-3xl mx-auto">
-          <div className="opacity-0-start animate-fade-in inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-            </span>
-            Free · Private · No install
-          </div>
 
-          <h1 className="opacity-0-start animate-fade-in-up delay-100 font-display text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-white">
+
+          <h1 className="opacity-0-start animate-fade-in-up delay-100 font-display text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-stone-900">
             Convert anything to{" "}
             <span className="text-gradient">any format</span>
           </h1>
 
-          <p className="opacity-0-start animate-fade-in-up delay-200 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="opacity-0-start animate-fade-in-up delay-200 text-lg sm:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
             The ultimate browser-based suite for file conversion and image editing.
             Fast, private, and professional — right in your tab.
           </p>
@@ -77,31 +71,17 @@ export default function Home() {
           <div className="opacity-0-start animate-fade-in-up delay-300 flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-2">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="font-display text-2xl sm:text-3xl font-black text-white">
+                <p className="font-display text-2xl sm:text-3xl font-black text-stone-900">
                   {stat.value}
                 </p>
-                <p className="text-xs text-slate-500 mt-0.5 uppercase tracking-wider">
+                <p className="text-xs text-stone-500 mt-0.5 uppercase tracking-wider">
                   {stat.label}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="opacity-0-start animate-fade-in-up delay-400 flex flex-wrap justify-center gap-3 pt-2">
-            {[
-              { icon: Lock, text: "Local processing" },
-              { icon: Cpu, text: "WASM-powered AI" },
-              { icon: Globe, text: "Works everywhere" },
-            ].map((badge) => (
-              <span
-                key={badge.text}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-slate-400"
-              >
-                <badge.icon className="h-3.5 w-3.5 text-primary/80" />
-                {badge.text}
-              </span>
-            ))}
-          </div>
+
         </div>
       </section>
 
@@ -111,10 +91,10 @@ export default function Home() {
         className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 section-glow pt-4"
       >
         <div className="opacity-0-start animate-fade-in-up delay-300 mb-10 text-center sm:text-left">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-stone-900">
             Choose your tool
           </h2>
-          <p className="text-sm text-slate-400 mt-2">
+          <p className="text-sm text-stone-600 mt-2">
             Search, filter by category, and launch in one click.
           </p>
         </div>
@@ -130,12 +110,12 @@ export default function Home() {
               className={`opacity-0-start animate-fade-in-up ${["delay-100", "delay-200", "delay-300"][i]} glass-panel glass-panel-hover rounded-2xl p-7 space-y-4 card-glow`}
             >
               <div
-                className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${item.glow} to-transparent border border-white/10`}
+                className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${item.glow} to-transparent border border-stone-900/15`}
               >
                 <item.icon className={`h-6 w-6 ${item.accent}`} />
               </div>
-              <h3 className="font-display font-bold text-white text-lg">{item.title}</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              <h3 className="font-display font-bold text-stone-900 text-lg">{item.title}</h3>
+              <p className="text-sm text-stone-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -144,10 +124,10 @@ export default function Home() {
       {/* FAQ */}
       <section className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 section-glow pt-4">
         <div className="text-center space-y-3 mb-10">
-          <h2 className="font-display text-3xl font-bold text-white">
+          <h2 className="font-display text-3xl font-bold text-stone-900">
             Frequently asked questions
           </h2>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-stone-600">
             Everything you need to know about privacy and performance.
           </p>
         </div>
@@ -157,8 +137,8 @@ export default function Home() {
               key={index}
               className="glass-panel glass-panel-hover rounded-2xl p-6 space-y-2 card-glow"
             >
-              <h3 className="font-display font-semibold text-white text-base">{faq.q}</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">{faq.a}</p>
+              <h3 className="font-display font-semibold text-stone-900 text-base">{faq.q}</h3>
+              <p className="text-sm text-stone-600 leading-relaxed">{faq.a}</p>
             </div>
           ))}
         </div>
