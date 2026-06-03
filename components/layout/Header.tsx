@@ -73,7 +73,7 @@ export default function Header() {
             <Link
               href="/#tools"
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center rounded-xl mt-2 py-2.5 text-sm font-semibold text-stone-900 bg-gradient-to-r from-primary to-secondary"
+              className="flex items-center justify-center rounded-xl mt-2 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-primary to-secondary"
             >
               Browse All Tools
             </Link>

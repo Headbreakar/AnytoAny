@@ -11,12 +11,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-2.5 group">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-secondary text-white font-bold text-sm shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-                A
-              </span>
-              <span className="font-display text-lg font-bold text-stone-900">
-                Anyto<span className="text-primary">Any</span>
-              </span>
+              <img 
+                src="/assets/logos/high-resolution-color-logo (1).png" 
+                alt="AnytoAny Logo" 
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
             </Link>
             <p className="text-sm text-stone-600 max-w-sm leading-relaxed">
               Fast, private file conversions and image tools — most processing happens right in your browser.
