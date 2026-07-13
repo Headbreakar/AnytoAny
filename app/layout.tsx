@@ -28,7 +28,10 @@ export const metadata: Metadata = {
       { url: '/favicon_io/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ]
   },
-  manifest: '/favicon_io/site.webmanifest'
+  manifest: '/favicon_io/site.webmanifest',
+  verification: {
+    google: "XxUYe747wu7H3KauonN8j9yanX5-iRuzCDYpqsxCD6M",
+  }
 };
 
 export default function RootLayout({
