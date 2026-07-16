@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/seo/toolMeta";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://anytoany.com";
+  const baseUrl = "https://anytoany.kumarprem22855.workers.dev";
 
   const routes = [
     {
