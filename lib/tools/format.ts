@@ -29,6 +29,7 @@ export function convertImageFormat(
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       }
 
+      
       ctx.drawImage(img, 0, 0);
 
       canvas.toBlob(
