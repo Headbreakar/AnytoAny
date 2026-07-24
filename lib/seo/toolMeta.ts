@@ -100,6 +100,35 @@ export const TOOLS: Record<string, ToolMeta> = {
     ],
     icon: "Image"
   },
+  "png-to-svg": {
+    slug: "png-to-svg",
+    name: "PNG to SVG",
+    title: "Convert PNG to SVG Online - Free Vector Tracing | AnytoAny",
+    description: "Vectorize PNG images into scalable SVG vector graphics directly in your browser. Pure client-side vector tracing with 100% data privacy.",
+    category: "image",
+    fileSizeCap: 15,
+    allowedTypes: ["image/png"],
+    howTo: [
+      "Select or drag and drop your PNG image into the converter.",
+      "Our in-browser vectorizer traces pixel contours into SVG vector paths.",
+      "Preview and download your scalable .svg vector file."
+    ],
+    faqs: [
+      {
+        question: "Does PNG to SVG produce true vector paths?",
+        answer: "Yes! Our converter uses advanced vector tracing to detect color boundaries and generate clean, scalable SVG paths (<path>)."
+      },
+      {
+        question: "Are my images stored on any server?",
+        answer: "No. The vector tracing algorithm runs 100% locally within your web browser."
+      },
+      {
+        question: "What kind of PNGs work best for vector conversion?",
+        answer: "Logos, icons, line art, signatures, and graphics with solid shapes or high contrast yield the best SVG vector tracing results."
+      }
+    ],
+    icon: "Image"
+  },
   "image-to-pdf": {
     slug: "image-to-pdf",
     name: "Image to PDF",

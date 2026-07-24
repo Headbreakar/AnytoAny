@@ -41,6 +41,7 @@ export default function Footer() {
                 ["JPG to PNG", "/tools/jpg-to-png"],
                 ["PNG to JPG", "/tools/png-to-jpg"],
                 ["PNG to WebP", "/tools/png-to-webp"],
+                ["PNG to SVG", "/tools/png-to-svg"],
                 ["Image to PDF", "/tools/image-to-pdf"],
                 ["XLSX to CSV", "/tools/xlsx-to-csv"],
               ].map(([label, href]) => (
