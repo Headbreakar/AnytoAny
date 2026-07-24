@@ -3,7 +3,7 @@
  */
 export function convertImageFormat(
   file: File,
-  targetFormat: "image/png" | "image/jpeg",
+  targetFormat: "image/png" | "image/jpeg" | "image/webp",
   quality = 0.95
 ): Promise<{ blob: Blob; url: string }> {
   return new Promise((resolve, reject) => {

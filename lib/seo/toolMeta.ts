@@ -71,6 +71,35 @@ export const TOOLS: Record<string, ToolMeta> = {
     ],
     icon: "Image"
   },
+  "png-to-webp": {
+    slug: "png-to-webp",
+    name: "PNG to WebP",
+    title: "Convert PNG to WebP Online - Free & Instant | AnytoAny",
+    description: "Convert your PNG images to lightweight, web-optimized WebP format instantly. Processed completely client-side in your web browser.",
+    category: "image",
+    fileSizeCap: 15,
+    allowedTypes: ["image/png"],
+    howTo: [
+      "Select or drag and drop your PNG image into the upload zone.",
+      "The conversion runs instantly inside your browser canvas.",
+      "Click Download to save your compressed WebP file."
+    ],
+    faqs: [
+      {
+        question: "Does PNG to WebP preserve image transparency?",
+        answer: "Yes! WebP fully supports alpha transparency, so all transparent areas of your PNG image will be preserved."
+      },
+      {
+        question: "Are my files uploaded to any server?",
+        answer: "No. All image processing happens locally in your browser for 100% privacy and maximum speed."
+      },
+      {
+        question: "What is the benefit of converting PNG to WebP?",
+        answer: "WebP provides significantly smaller file sizes while preserving visual quality and transparency, making your web pages load faster."
+      }
+    ],
+    icon: "Image"
+  },
   "image-to-pdf": {
     slug: "image-to-pdf",
     name: "Image to PDF",
